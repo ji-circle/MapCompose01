@@ -1,5 +1,6 @@
 package com.example.mapcompose01
 
+import android.app.Application
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -25,7 +27,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MapCompose01Theme {
                 val navController = rememberNavController()
-
+//                val mapViewModel: MapViewModel = viewModel()
                 NavHost(
                     navController,
                     startDestination = "mapScreen"
@@ -67,21 +69,5 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MapCompose01Theme {
-        Greeting("Android")
     }
 }
