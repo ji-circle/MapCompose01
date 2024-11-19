@@ -86,6 +86,9 @@ dependencies {
 
     implementation(libs.android.maps.utils)
 
+//    implementation("androidx.lifecycle:lifecycle-livedata:2.8.7")
+    implementation(libs.androidx.lifecycle.livedata)
+
 
 //    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 

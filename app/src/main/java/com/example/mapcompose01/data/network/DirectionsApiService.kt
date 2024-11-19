@@ -13,7 +13,7 @@ interface DirectionsApiService {
         @Query("mode") mode: String,
         @Query("alternatives") alternatives: Boolean = true,
         @Query("language") language: String = "ko",
-        @Query("key") apiKey: String = "vAIzaSyBjB8ZQ4-Dds48-gF6GvxPYYmoo0hyJF5U"
+        @Query("key") apiKey: String = "AIzaSyBjB8ZQ4-Dds48-gF6GvxPYYmoo0hyJF5U"
     ): DirectionsResponse
 
 
@@ -28,7 +28,7 @@ interface DirectionsApiService {
         @Query("mode") mode: String = "transit",
         @Query("alternatives") alternatives: Boolean = true,
         @Query("language") language: String = "ko",
-        @Query("key") apiKey: String = "vAIzaSyBjB8ZQ4-Dds48-gF6GvxPYYmoo0hyJF5U"
+        @Query("key") apiKey: String = "AIzaSyBjB8ZQ4-Dds48-gF6GvxPYYmoo0hyJF5U"
     ): DirectionsResponse
 
     //출발시간
@@ -42,21 +42,21 @@ interface DirectionsApiService {
         @Query("mode") mode: String = "transit",
         @Query("alternatives") alternatives: Boolean = true,
         @Query("language") language: String = "ko",
-        @Query("key") apiKey: String = "vAIzaSyBjB8ZQ4-Dds48-gF6GvxPYYmoo0hyJF5U"
+        @Query("key") apiKey: String = "AIzaSyBjB8ZQ4-Dds48-gF6GvxPYYmoo0hyJF5U"
     ): DirectionsResponse
 
 
     //시간 없이
     @GET("directions/json")
     suspend fun getDirectionsTmRp(
-        @Query("origin") origin: String,
-        @Query("destination") destination: String,
+        @Query("origin") origin: String ="london bridge",
+        @Query("destination") destination: String = "granada",
         @Query("transit_mode") transitMode: String ="",
         @Query("transit_routing_preference") transitRoutingPreference: String="",
         @Query("mode") mode: String = "transit",
         @Query("alternatives") alternatives: Boolean = true,
         @Query("language") language: String = "ko",
-        @Query("key") apiKey: String = "vAIzaSyBjB8ZQ4-Dds48-gF6GvxPYYmoo0hyJF5U"
+        @Query("key") apiKey: String = "AIzaSyBjB8ZQ4-Dds48-gF6GvxPYYmoo0hyJF5U"
     ): DirectionsResponse
 
 }

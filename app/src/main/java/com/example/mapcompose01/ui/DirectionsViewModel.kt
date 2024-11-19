@@ -223,7 +223,7 @@ class DirectionsViewModel(
         return true
     }
 
-    //TODO 채명님 확인 - 시간
+    //TODO 확인 - 시간
     fun setTime(hour: Int, minute: Int) {
         _selectedTime.value = LocalTime.of(hour, minute)
     }
